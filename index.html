@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RunnerUrbano | Carrera infinita 3D en una ciudad distópica</title>
+<meta name="description" content="Portal oficial de RunnerUrbano, un endless runner 3D hecho en Unity. Conoce la historia, el personaje, las mecánicas y juega en tu navegador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Big+Shoulders+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <a class="brand" href="#inicio" aria-label="RunnerUrbano, inicio">
+    <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="#f0b73a"/><circle cx="23" cy="10" r="4" fill="#1c2133"/><path d="M22 15l-5 7 6 3-3 10M22 15l6 6 5-1M17 22l-6 2" stroke="#1c2133" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <span>Runner<b>Urbano</b></span>
+  </a>
+  <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  <nav id="menu" aria-label="Principal">
+    <a href="#historia">Historia</a>
+    <a href="#personaje">Personaje</a>
+    <a href="#mecanicas">Mecánicas</a>
+    <a href="#datos">Datos</a>
+    <a href="#jugar" class="nav-play">Jugar ahora</a>
+  </nav>
+  <div class="hud" aria-hidden="true"><span>Distancia</span><output id="hud">000000</output></div>
+  <div class="lane" aria-hidden="true"><div id="bar"><i></i></div></div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <p class="tag">Endless runner 3D</p>
+    <h1>Runner<br>Urbano</h1>
+    <p class="punch">La ciudad no frena. Tú tampoco puedes.</p>
+    <p class="lead">Una avenida nocturna, obstáculos que aparecen sin aviso y un corredor que solo tiene una meta: llegar más lejos que su propio récord antes de quedarse sin vidas.</p>
+    <div class="cta">
+      <a class="btn btn-main" href="#jugar" data-autoplay>JUGAR AHORA</a>
+      <a class="btn btn-alt" href="#historia">Conocer la historia</a>
+    </div>
+    <ul class="signs" aria-label="Datos rápidos">
+      <li><strong data-stat="meta">1000</strong><span>puntos para ganar</span></li>
+      <li><strong data-stat="vidas">3</strong><span>vidas iniciales</span></li>
+      <li class="keys"><kbd>↑</kbd><kbd>↓</kbd><span>saltar y agacharse</span></li>
+    </ul>
+  </div>
+  <figure class="poster">
+    <img src="img/ciudad.jpg" alt="Ilustración de la ciudad urbana distópica nocturna con edificios iluminados, una barricada y una señal elevada" width="1600" height="752">
+    <figcaption>Avenida nocturna del juego</figcaption>
+    <div class="id"><img src="img/personaje-frente.jpg" alt="Corredor urbano de cabello verde, visto de frente" width="235" height="422"><span>El corredor</span></div>
+  </figure>
+</section>
+
+<section class="sec" id="historia">
+  <h2>Historia</h2>
+  <div class="cols">
+    <div class="prose">
+      <h3>Una ciudad que dejó de esperar</h3>
+      <p>El juego transcurre en una metrópolis futurista que se deterioró con el tiempo. Sus calles son largas y están iluminadas por neones, señales y luces de edificios que nunca se apagan. Las barricadas, los contenedores y las estructuras de construcción bloquean el camino sin ningún orden aparente, y no existen atajos ni descansos.</p>
+      <p>En este escenario la velocidad es la única forma de moverse y el peligro llega sin avisar. Nada del entorno ayuda: cada obstáculo es una amenaza que el protagonista debe leer y resolver en una fracción de segundo.</p>
+      <h3>Por qué corre</h3>
+      <p>El corredor entra en la avenida y empieza a avanzar sin detenerse. Su motivación es personal y simple: llegar tan lejos como pueda, sobrevivir al caos urbano y superar su propia marca. No hay diálogos ni misiones. El arco narrativo se cuenta con la carrera misma, en la que cada partida termina en una nueva marca o en una caída.</p>
+    </div>
+    <ol class="film" aria-label="Secuencia narrativa">
+      <li><img src="img/historia-1.png" alt="El corredor aparece en la avenida" loading="lazy"><b>Entra en escena</b><p>Aparece en una avenida urbana y comienza a avanzar sin detenerse.</p></li>
+      <li><img src="img/historia-2.png" alt="El corredor mira hacia adelante" loading="lazy"><b>Se mueve por una meta</b><p>Debe llegar lo más lejos posible y alcanzar un nuevo récord.</p></li>
+      <li><img src="img/historia-3.png" alt="El corredor frente a obstáculos" loading="lazy"><b>Supera el desafío</b><p>Obstáculos bajos y altos aparecen al azar: saltar o agacharse.</p></li>
+      <li><img src="img/historia-4.png" alt="El corredor ante la meta o la derrota" loading="lazy"><b>Gana o cae</b><p>Si sobrevive, supera su récord. Si pierde todas sus vidas, la carrera termina.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="personaje">
+  <h2>Personaje principal</h2>
+  <div class="turn">
+    <figure><img src="img/personaje-3-4.jpg" alt="Corredor urbano en vista tres cuartos" loading="lazy"><figcaption>Tres cuartos</figcaption></figure>
+    <figure class="mid"><img src="img/personaje-frente.jpg" alt="Corredor urbano en vista frontal" loading="lazy"><figcaption>Frente</figcaption></figure>
+    <figure><img src="img/personaje-espalda.jpg" alt="Corredor urbano en vista trasera" loading="lazy"><figcaption>Espalda</figcaption></figure>
+  </div>
+  <div class="cols three">
+    <div class="prose">
+      <h3>El corredor urbano</h3>
+      <p>Es el único protagonista y corre de forma continua por la avenida. El jugador no controla su velocidad: controla sus reflejos. Su silueta caricaturesca se reconoce al instante, incluso con el juego a máxima velocidad.</p>
+    </div>
+    <div class="prose">
+      <h3>Rasgos distintivos</h3>
+      <p>Cabello verde llamativo con vetas rojas, rostro expresivo, chaleco, camiseta oscura, pantalón cargo y botas. Su estilo es Cartoon 3D con proporciones exageradas, inspirado en personajes urbanos de videojuegos de carreras.</p>
+      <ul class="pal" aria-label="Paleta del personaje"><li style="--c:#6fd62a">Verde</li><li style="--c:#4c6b3c">Chaleco</li><li style="--c:#5a5f58">Cargo</li><li style="--c:#2a2420">Botas</li></ul>
+    </div>
+    <div>
+      <h3>Animaciones</h3>
+      <ul class="anim">
+        <li><b>Correr</b><span>estado por defecto</span></li>
+        <li><b>Saltar</b><span>con <kbd>↑</kbd></span></li>
+        <li><b>Agacharse</b><span>con <kbd>↓</kbd></span></li>
+        <li><b>Morir</b><span>al perder la última vida</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="mecanicas">
+  <h2>Mecánicas y controles</h2>
+  <div class="cols">
+    <div>
+      <h3>Controles</h3>
+      <ul class="ctrl">
+        <li><kbd>↑</kbd><div><b>Saltar</b><p>El corredor se eleva para pasar sobre obstáculos bajos.</p></div></li>
+        <li><kbd>↓</kbd><div><b>Agacharse o deslizarse</b><p>Reduce su altura y su área de colisión para pasar bajo obstáculos altos.</p></div></li>
+        <li><kbd>R</kbd><div><b>Reiniciar</b><p>Empieza una partida nueva al terminar.</p></div></li>
+      </ul>
+      <p class="note">Sin pulsar nada, el personaje sigue corriendo solo. Todo se juega con el teclado.</p>
+    </div>
+    <div>
+      <h3>Reglas del juego</h3>
+      <div class="obs">
+        <div class="low"><b>Obstáculo bajo</b><p>Barricadas, cajas y bloques de construcción. Se esquivan saltando.</p></div>
+        <div class="high"><b>Obstáculo alto</b><p>Barras, estructuras suspendidas y señales elevadas. Se esquivan agachándose.</p></div>
+      </div>
+      <ul class="rules">
+        <li>El tipo de obstáculo se elige al azar y aparece a intervalos de tiempo variables.</li>
+        <li>Cada choque quita una vida. No hay elementos recolectables.</li>
+        <li>Los obstáculos que quedan atrás se eliminan de la escena.</li>
+        <li>La puntuación sube con el tiempo que el jugador sobrevive.</li>
+        <li><strong>Victoria:</strong> alcanzar o superar la puntuación objetivo (<span data-stat="meta">1000</span>).</li>
+        <li><strong>Derrota:</strong> perder las <span data-stat="vidas">3</span> vidas y ver el mensaje Juego Terminado con la puntuación final.</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="origin"><img src="img/inspiracion-dino.png" alt="Captura del juego del dinosaurio de Chrome, referencia de la mecánica" width="414" height="239" loading="lazy"><p>La dinámica de esquivo nace del clásico juego del dinosaurio de Chrome, llevada a un escenario 3D completo.</p></aside>
+</section>
+
+<section class="sec alt" id="datos">
+  <h2>Datos del proyecto</h2>
+  <div class="board">
+    <div class="big"><strong data-stat="meta">1000</strong><span>puntos para ganar</span></div>
+    <div class="big"><strong data-stat="vidas">3</strong><span>vidas iniciales</span></div>
+    <div><strong>2</strong><span>acciones: saltar y agacharse</span></div>
+    <div><strong>2</strong><span>tipos de obstáculo</span></div>
+    <div><strong>4</strong><span>animaciones del personaje</span></div>
+    <div><strong>3</strong><span>integrantes del equipo</span></div>
+  </div>
+  <div class="cols">
+    <figure class="ramp">
+      <svg viewBox="0 0 420 190" role="img" aria-label="Gráfico de dificultad creciente en tres etapas">
+        <path d="M10 170H410" stroke="#e8e4cf" stroke-width="2" stroke-dasharray="14 10"/>
+        <path d="M10 150C110 148 150 120 215 95S340 40 410 22" fill="none" stroke="#f0b73a" stroke-width="5" stroke-linecap="round"/>
+        <g fill="#e8e4cf" font-size="13" font-family="Archivo,sans-serif"><text x="14" y="136">Inicial</text><text x="170" y="82">Intermedia</text><text x="330" y="16">Avanzada</text></g>
+      </svg>
+      <figcaption>La velocidad aumenta con el tiempo y los obstáculos aparecen con más frecuencia, siempre en intervalos variables.</figcaption>
+    </figure>
+    <dl class="spec">
+      <div><dt>Género</dt><dd>Endless runner 3D, de acción y reflejos</dd></div>
+      <div><dt>Perspectiva</dt><dd>Tercera persona</dd></div>
+      <div><dt>Motor</dt><dd>Unity, publicado en WebGL</dd></div>
+      <div><dt>Estilo visual</dt><dd>Cartoon 3D en ciudad nocturna con neones</dd></div>
+      <div><dt>Público</dt><dd>Jugadores de partidas cortas y de récords</dd></div>
+      <div><dt>Puntuación</dt><dd>Por tiempo de supervivencia</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec play" id="jugar">
+  <h2>Jugar ahora</h2>
+  <div class="stage" id="stage">
+    <iframe id="game" title="RunnerUrbano, juego en Unity WebGL" allow="fullscreen; autoplay; gamepad" allowfullscreen loading="lazy" data-src="https://aquamarine-pothos-2552f7.netlify.app/"></iframe>
+    <button class="start" id="start"><span>Iniciar partida</span><small>Cuando cargue, haz clic dentro del juego para usar el teclado</small></button>
+  </div>
+  <div class="tools">
+    <button class="btn btn-alt" id="full" type="button">Pantalla completa</button>
+    <a class="btn btn-alt" href="https://aquamarine-pothos-2552f7.netlify.app/" target="_blank" rel="noopener">Abrir en otra pestaña</a>
+  </div>
+  <div class="cols req">
+    <div><h3>Requisitos mínimos</h3>
+      <ul><li>Computadora con teclado físico.</li><li>Chrome, Edge o Firefox actualizados, con WebGL 2.0 activo.</li><li>Aceleración por hardware habilitada y 4 GB de memoria.</li><li>Pantalla de 1280 × 720 o más.</li></ul></div>
+    <div><h3>Para jugar sin problemas</h3>
+      <ul><li>La primera carga puede tardar unos segundos.</li><li>Haz clic dentro del juego antes de usar las flechas.</li><li>Si no responde, recarga o usa Abrir en otra pestaña.</li><li>Cierra pestañas pesadas para mantener la fluidez.</li></ul></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="f-title">Creadores</p>
+  <ul class="crew"><li>Harold Abdel Carpio Santander</li><li>Alexander Condori Nina</li><li>Pablo Alejandro Zaconeta Guanca</li></ul>
+  <p class="f-small">Game Development, Unidad 2: Scripting y matemáticas para videojuegos. Universidad Privada del Valle. Hecho con Unity.</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
