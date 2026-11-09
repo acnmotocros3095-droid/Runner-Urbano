@@ -119,3 +119,30 @@ nav.open{display:flex}
 .board .big{grid-column:span 12}.board div{grid-column:span 6}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.poster{animation:none}}
+
+.blood-city{--alert:#ff526c;background:radial-gradient(ellipse at 95% 12%,#3d2338,transparent 55%),var(--deep);border-top:4px solid var(--alert)}
+.blood-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.blood-city .tag{border-color:var(--alert);color:var(--alert)}
+.blood-heading>span,.mission-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--mute)}
+.blood-city h2{color:var(--alert)}
+.blood-city .punch{font-size:2rem;color:var(--lane)}
+.blood-city .btn-main{background:var(--alert);border-color:var(--alert);box-shadow:0 5px 0 #942f43}
+.mission{padding:1.5rem;border:1px solid #764252;border-radius:16px;background:var(--panel)}
+.mission-steps{list-style:none;padding:0;display:grid;gap:1.4rem;margin-top:1.4rem}
+.mission-steps li{display:flex;gap:1rem}
+.mission-steps li>span{font:900 2rem var(--h);color:var(--alert)}
+.mission-steps h3{font-size:1.5rem;color:var(--lane)}
+.mission-steps p{color:var(--mute);font-size:.95rem;line-height:1.5}
+.city-controls{display:flex;align-items:center;flex-wrap:wrap;gap:1.3rem 2rem;padding:1.5rem 0;margin-top:2rem;border-top:1px solid #513c50;border-bottom:1px solid #513c50}
+.city-controls h3{margin:0;color:var(--alert)}
+.city-controls p{display:flex;align-items:center;gap:.8rem}
+.arrow-keys{display:inline-flex;gap:.25rem}
+.city-player{margin-top:3rem;scroll-margin-top:100px}
+.city-player>h3{margin-bottom:1rem}
+.city-start{padding:1.5rem;background:radial-gradient(ellipse at center,#45273e,#14182a)}
+.city-start span{color:var(--alert)}
+.city-start small{max-width:36rem;margin:auto}
+.city-stage{min-height:420px}
+.city-player .tools{margin-bottom:1rem}
+@media(min-width:861px) and (max-width:1120px){.top{gap:.5rem;padding-left:1rem;padding-right:1rem}.hud{display:none}nav a{padding:.4rem .5rem}}
+@media(max-width:600px){.city-controls{align-items:flex-start;flex-direction:column}.city-stage{min-height:400px}.city-start span{font-size:2.5rem}.city-start small{font-size:.9rem}.blood-city .btn-main{font-size:1.2rem}}

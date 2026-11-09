@@ -22,6 +22,7 @@
     <a href="#personaje">Personaje</a>
     <a href="#mecanicas">Mecánicas</a>
     <a href="#datos">Datos</a>
+    <a href="#ciudad-sangrienta">Ciudad Sangrienta</a>
     <a href="#jugar" class="nav-play">Jugar ahora</a>
   </nav>
   <div class="hud" aria-hidden="true"><span>Distancia</span><output id="hud">000000</output></div>
@@ -178,6 +179,37 @@
       <ul><li>La primera carga puede tardar unos segundos.</li><li>Haz clic dentro del juego antes de usar las flechas.</li><li>Si no responde, recarga o usa Abrir en otra pestaña.</li><li>Cierra pestañas pesadas para mantener la fluidez.</li></ul></div>
   </div>
 </section>
+<section class="sec alt blood-city" id="ciudad-sangrienta" aria-labelledby="blood-title">
+  <div class="blood-heading"><p class="tag">Otro juego · Laberinto y persecución</p><span>SECTOR CERO / SUJETO 001</span></div>
+  <h2 id="blood-title">La Ciudad Sangrienta</h2>
+  <div class="cols">
+    <div class="prose">
+      <p class="punch">Te han visto. Encuentra la salida.</p>
+      <p>El mismo personaje, un nuevo desafío: el Sujeto 001 debe escapar del Sector Cero. Recorre un laberinto 3D con una dinámica inspirada en Pac-Man, recoge los núcleos de energía y evita a los bumeranes que te persiguen cuando te detectan.</p>
+      <p>No basta con sobrevivir: recoge los <strong>36 núcleos</strong> y atraviesa la <strong>puerta superior</strong> cuando esté abierta para completar la misión.</p>
+      <div class="cta"><a class="btn btn-main" href="#jugar-ciudad" data-city-play>JUGAR CIUDAD SANGRIENTA</a></div>
+    </div>
+    <aside class="mission" aria-label="Objetivos de la misión">
+      <p class="mission-label">PLAN DE ESCAPE</p>
+      <ol class="mission-steps">
+        <li><span>01</span><div><h3>Recoge los 36 núcleos</h3><p>Explora los pasillos y reúne toda la energía del laberinto.</p></div></li>
+        <li><span>02</span><div><h3>Evita a los bumeranes</h3><p>Si te ven, te persiguen. Aprovecha los giros del laberinto para alejarte.</p></div></li>
+        <li><span>03</span><div><h3>Escapa del Sector Cero</h3><p>Cuando la puerta superior esté abierta, atraviésala para ganar.</p></div></li>
+      </ol>
+    </aside>
+  </div>
+  <div class="city-controls"><h3>Controles</h3><p><kbd>Enter</kbd> Empezar</p><p><span class="arrow-keys"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span> Mover al personaje</p></div>
+  <div class="city-player" id="jugar-ciudad">
+    <h3>Entra al laberinto</h3>
+    <div class="stage city-stage" id="city-stage">
+      <iframe id="city-game" title="La Ciudad Sangrienta, juego de laberinto en Unity WebGL" allow="fullscreen; autoplay; gamepad" allowfullscreen loading="lazy" data-src="https://illustrious-blancmange-930e81.netlify.app/"></iframe>
+      <button class="start city-start" id="city-start" type="button"><span>Escapar del Sector Cero</span><small>Haz clic para cargar el juego. Después, pulsa Enter dentro de la partida.</small></button>
+    </div>
+    <div class="tools"><button class="btn btn-alt" id="city-full" type="button">Pantalla completa</button><a class="btn btn-alt" href="https://illustrious-blancmange-930e81.netlify.app/" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a></div>
+    <p class="note">Juega con teclado en una computadora. Haz clic dentro del juego para activar los controles. Para ver todo el laberinto, usa pantalla completa; si no carga aquí, ábrelo en otra pestaña.</p>
+  </div>
+</section>
+
 </main>
 
 <footer>

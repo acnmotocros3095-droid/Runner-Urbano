@@ -44,3 +44,21 @@ $('#full').addEventListener('click', () => {
   play();
   (stage.requestFullscreen || stage.webkitRequestFullscreen || (() => {})).call(stage);
 });
+
+// Carga independiente del segundo juego.
+function playCity() {
+  const frame = $('#city-game');
+  if (!frame.getAttribute('src')) frame.src = frame.dataset.src;
+  $('#city-start').classList.add('off');
+  frame.focus();
+}
+$('#city-start').addEventListener('click', playCity);
+$('[data-city-play]').addEventListener('click', playCity);
+$('#city-full').addEventListener('click', async () => {
+  playCity();
+  const stage = $('#city-stage');
+  try {
+    if (stage.requestFullscreen) await stage.requestFullscreen();
+    else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
+  } catch { /* El enlace externo permanece disponible. */ }
+});
