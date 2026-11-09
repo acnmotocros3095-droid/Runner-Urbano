@@ -62,3 +62,14 @@ $('#city-full').addEventListener('click', async () => {
     else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
   } catch { /* El enlace externo permanece disponible. */ }
 });
+
+// Conservar el campo de juego completo al cambiar el tamaño o entrar en fullscreen.
+function fitGameStage(stage) {
+  const viewport = stage.querySelector('.game-viewport');
+  const scale = Math.min(stage.clientWidth / 960, stage.clientHeight / 600);
+  viewport.style.setProperty('--game-scale', scale);
+}
+const gameStages = [...document.querySelectorAll('.stage')];
+const stageObserver = new ResizeObserver(entries => entries.forEach(entry => fitGameStage(entry.target)));
+gameStages.forEach(stage => { stageObserver.observe(stage); fitGameStage(stage); });
+document.addEventListener('fullscreenchange', () => gameStages.forEach(fitGameStage));

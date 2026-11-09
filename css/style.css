@@ -146,3 +146,12 @@ nav.open{display:flex}
 .city-player .tools{margin-bottom:1rem}
 @media(min-width:861px) and (max-width:1120px){.top{gap:.5rem;padding-left:1rem;padding-right:1rem}.hud{display:none}nav a{padding:.4rem .5rem}}
 @media(max-width:600px){.city-controls{align-items:flex-start;flex-direction:column}.city-stage{min-height:400px}.city-start span{font-size:2.5rem}.city-start small{font-size:.9rem}.blood-city .btn-main{font-size:1.2rem}}
+
+/* Encajar el canvas Unity de 960 x 600 sin los márgenes blancos del host. */
+.stage{display:grid;place-items:center;isolation:isolate;background:linear-gradient(#101524d9,#101524eb),url(../img/ciudad.jpg) center/cover}
+.city-stage{background:radial-gradient(ellipse at 50% 10%,#6b23334d,transparent 65%),linear-gradient(#130f1bdf,#130f1bf0),url(../img/ciudad.jpg) center/cover}
+.stage::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(90deg,transparent 0 79px,#e8e4cf08 79px 80px);pointer-events:none}
+.game-viewport{position:relative;width:960px;height:600px;overflow:hidden;flex:none;transform:scale(var(--game-scale,1));background:#1f1f20;box-shadow:0 0 60px #0009}
+.game-viewport iframe{position:absolute;inset:0;width:960px;height:600px;border:0;background:#1f1f20}
+.stage:fullscreen,.stage:-webkit-full-screen{width:100%;height:100%;max-width:none;aspect-ratio:auto;border:0;border-radius:0}
+.start{z-index:2}
