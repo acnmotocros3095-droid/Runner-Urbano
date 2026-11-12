@@ -1,50 +1,391 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#102c2b"><meta name="description" content="Portal de Alexander Condori Nina. Historia, controles y desarrollo de RunnerUrbano y La Ciudad Sangrienta. Dos juegos Unity en una misma página.">
-<title>RunnerUrbano — Alexander Condori Nina</title>
-<link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102c2b">
+  <meta name="description"
+    content="Portal de Alexander Condori Nina. Historia, controles y desarrollo de RunnerUrbano y La Ciudad Sangrienta. Dos juegos Unity en una misma página.">
+  <title>RunnerUrbano — Alexander Condori Nina</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="header">
-  <a href="#inicio" class="brand" aria-label="RunnerUrbano, inicio"><span class="brand-mark" aria-hidden="true">R↗</span><span>RUNNER<span class="brand-light">URBANO</span></span></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button">Menú ☰</button>
-  <nav id="navigation" aria-label="Navegación principal"><a href="#runner">01 · Runner</a><a href="#laberinto">02 · Laberinto</a><a href="#personaje">Personaje</a><a href="#equipo">Créditos</a></nav>
-  <button class="motion-toggle" type="button" aria-pressed="false">Pausar animación</button><div class="scroll-progress" aria-hidden="true"></div>
-</header>
-<main id="contenido">
-<section class="hero section" id="inicio">
-  <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> PORTAL DE GAME DEVELOPMENT</p><p class="developer">Alexander Condori Nina <span>/ Developer</span></p><h1>Una ciudad.<br>Dos formas de<br><em>sobrevivir.</em></h1><p class="hero-lead">Corre por la avenida o encuentra la salida del Sector Cero. Dos juegos, el mismo personaje y una nueva oportunidad en cada partida.</p><div class="hero-actions"><a class="button" href="#runner">01 · RunnerUrbano ↓</a><a class="button outline" href="#laberinto">02 · La Ciudad Sangrienta ↓</a></div><div class="hero-meta"><span>2 juegos en el navegador</span><span>Hechos en Unity</span><span>Inicio manual</span></div></div>
-  <div class="hero-visual"><div class="orb" aria-hidden="true"></div><figure class="city-photo floating"><img src="img/ciudad.jpg" width="1600" height="752" alt="La ciudad nocturna del universo RunnerUrbano"><figcaption>EXPLORA / SOBREVIVE / REPITE</figcaption></figure><figure class="character-photo floating delayed"><img src="img/personaje-frente.jpg" width="235" height="422" alt="Protagonista de cabello verde y vestimenta urbana"><figcaption>EL CORREDOR <span>001</span></figcaption></figure><div class="floating-tag">↗ <span>La próxima ruta<br>la eliges tú.</span></div><span class="visual-coord" aria-hidden="true">SECTOR CERO — 01 / 02</span></div>
-</section>
-<div class="ticker" aria-hidden="true"><span>RUN · COLLECT · ESCAPE</span><b>✳</b><span>ELIGE TU SIGUIENTE DESAFÍO</span><b>✳</b><span>RUN · COLLECT · ESCAPE</span></div>
-<section class="section selection" id="juegos"><div class="section-heading reveal"><div><p class="eyebrow">ELIGE TU RUTA</p><h2>Dos desafíos.<br>Tu decisión.</h2></div><p>Conoce la historia y los controles de cada juego. Después, pulsa su botón START para comenzar aquí mismo.</p></div><div class="game-cards"><article class="game-card reveal"><div class="card-media"><img src="img/ciudad.jpg" alt="Avenida nocturna de RunnerUrbano" loading="lazy"><span class="card-number">01</span></div><div class="card-body"><p class="eyebrow">ACCIÓN / ENDLESS RUNNER 3D</p><h3>RunnerUrbano</h3><p>Lee el camino. Salta. Deslízate. Una carrera de reflejos por una ciudad que no te da tregua.</p><a class="button" href="#runner">Explorar juego ↗</a></div></article><article class="game-card reveal"><div class="card-media maze-art"><div class="maze-symbol" aria-hidden="true">⌘</div><span class="maze-caption">SECTOR CERO</span><span class="card-number">02</span></div><div class="card-body"><p class="eyebrow">ESTRATEGIA / LABERINTO 3D</p><h3>La Ciudad Sangrienta</h3><p>Recoge la energía, evita a los bumeranes y encuentra la salida. Si te ven, comienza la caza.</p><a class="button" href="#laberinto">Explorar juego ↗</a></div></article></div></section>
-<!-- Ambos juegos pertenecen a este mismo portal. -->
-<section class="game section" id="runner" aria-labelledby="title-runner">
-<div class="section-top reveal"><span class="eyebrow">JUEGO 01 / ACCIÓN / ENDLESS RUNNER 3D</span><span class="index">01</span></div>
-<div class="game-heading reveal"><h2 id="title-runner">RunnerUrbano</h2><p>La avenida nunca se detiene.</p></div>
-<div class="game-intro"><figure class="game-art reveal"><img src="img/ciudad.jpg" alt="Escenario nocturno de RunnerUrbano" loading="lazy"><figcaption>El escenario · avenida nocturna</figcaption></figure><div class="story reveal"><span class="eyebrow">LA HISTORIA</span><h3>Una ciudad que dejó de esperar.</h3><p>Una metrópolis futurista se ha deteriorado: barricadas, contenedores y estructuras de construcción ocupan una avenida iluminada por neones. El corredor avanza sin detenerse. Su motivación es sobrevivir al caos y superar su propia marca. Su historia se cuenta con cada salto, cada choque y cada nuevo intento.</p><div class="stats"><div><strong>1000</strong><span>puntos para ganar</span></div><div><strong>3</strong><span>vidas iniciales</span></div><div><strong>2</strong><span>acciones de esquivo</span></div></div></div></div>
-<div class="guide-grid"><div class="reveal"><span class="eyebrow">CÓMO JUGAR</span><h3>Tu próxima partida,<br>paso a paso.</h3><ol class="steps"><li><span>01</span><div><h4>Mira el obstáculo</h4><p>El personaje corre automáticamente. Identifica si el peligro es bajo o alto.</p></div></li><li><span>02</span><div><h4>Elige tu movimiento</h4><p>Salta sobre barricadas y cajas. Agáchate para pasar bajo barras y señales.</p></div></li><li><span>03</span><div><h4>Alcanza la meta</h4><p>La puntuación aumenta al sobrevivir. Llega a 1000 puntos antes de perder las tres vidas.</p></div></li></ol></div><div class="rules reveal"><span class="eyebrow">DOMINA LOS CONTROLES</span><ul class="keys"><li><kbd>↑</kbd><span>Saltar</span></li><li><kbd>↓</kbd><span>Agacharse</span></li><li><kbd>R</kbd><span>Reiniciar al terminar</span></li></ul><div class="result"><h4>Objetivo de victoria</h4><p>Alcanza o supera los 1000 puntos.</p></div><div class="result"><h4>El peligro</h4><p>Cada choque resta una vida. Al perder las tres, termina la carrera.</p></div></div></div>
-<div class="development reveal"><div><span class="eyebrow">CÓMO ESTÁ HECHO</span><h3>Dentro del juego.</h3><p class="tech">Unity · WebGL · Tercera persona</p></div><div class="build-list"><div><h4>Escenario y personaje</h4><p>Entorno 3D urbano y protagonista de estilo cartoon. Sus animaciones permiten correr, saltar, agacharse y morir.</p></div><div><h4>Obstáculos y colisiones</h4><p>Los obstáculos bajos y altos aparecen con variación de tiempo y tipo. Los que quedan atrás se retiran de la escena.</p></div><div><h4>Progresión e interfaz</h4><p>La dificultad aumenta con el tiempo. La interfaz comunica puntuación, vidas y resultado.</p></div></div></div>
-<div class="player reveal" data-player="runner"><div class="player-toolbar"><div><span class="eyebrow">ZONA DE JUEGO / 01</span><h3>RunnerUrbano</h3></div><div class="player-actions"><button class="button start-button" data-start="runner" type="button">▶ START</button><button class="icon-button" data-full="runner" aria-label="Pantalla completa de RunnerUrbano" type="button">⛶ <span>Pantalla completa</span></button></div></div>
-<p class="player-status" id="status-runner" role="status" aria-live="polite">En espera · El juego solo se carga cuando pulsas START.</p>
-<div class="stage runner" id="stage-runner"><div class="game-viewport"><iframe scrolling="no" id="frame-runner" title="RunnerUrbano en Unity WebGL" data-src="https://aquamarine-pothos-2552f7.netlify.app/" allow="fullscreen; autoplay; gamepad" allowfullscreen tabindex="-1"></iframe></div><div class="placeholder"><span class="placeholder-icon" aria-hidden="true">↗</span><strong>Tu partida empieza aquí.</strong><p>Usa el botón START de arriba para entrar.</p><span>UNITY WEBGL / TECLADO</span></div></div>
-<p class="player-help">Haz clic dentro del juego y usa ↑ / ↓. La primera carga puede tardar. Pulsa Esc para salir de pantalla completa.</p><button type="button" class="text-button retry" data-retry="runner" hidden>Volver a cargar este juego</button></div>
-</section><section class="game section" id="laberinto" aria-labelledby="title-laberinto">
-<div class="section-top reveal"><span class="eyebrow">JUEGO 02 / ESTRATEGIA / LABERINTO 3D</span><span class="index">02</span></div>
-<div class="game-heading reveal"><h2 id="title-laberinto">La Ciudad Sangrienta</h2><p>Si te ven, comienza la caza.</p></div>
-<div class="game-intro"><figure class="game-art reveal"><div class="maze-art large-maze" aria-label="Ilustración conceptual de Sector Cero"><span class="maze-symbol" aria-hidden="true">⌘</span><span class="maze-caption">SECTOR CERO / SUJETO 001</span></div><figcaption>Ilustración conceptual · no es un mapa del nivel</figcaption></figure><div class="story reveal"><span class="eyebrow">LA HISTORIA</span><h3>Un escape desde el Sector Cero.</h3><p>El Sujeto 001 está atrapado en el Sector Cero. Para escapar debe explorar un laberinto vigilado por bumeranes que lo persiguen cuando lo ven. Los núcleos de energía están repartidos por los pasillos y la salida se encuentra en la parte superior. Cada desvío exige decidir entre avanzar hacia el objetivo o alejarse de una persecución.</p><div class="stats"><div><strong>36</strong><span>núcleos de energía</span></div><div><strong>1</strong><span>salida superior</span></div><div><strong>4</strong><span>direcciones</span></div></div></div></div>
-<div class="guide-grid"><div class="reveal"><span class="eyebrow">CÓMO JUGAR</span><h3>Tu próxima partida,<br>paso a paso.</h3><ol class="steps"><li><span>01</span><div><h4>Explora el Sector Cero</h4><p>Muévete por los pasillos y recoge los 36 núcleos. El contador indica cuántos faltan.</p></div></li><li><span>02</span><div><h4>Evita ser detectado</h4><p>Los bumeranes te siguen si te ven. Aprovecha los giros y la distribución del laberinto para alejarte.</p></div></li><li><span>03</span><div><h4>Cruza la salida</h4><p>Completa la recolección y atraviesa la puerta superior cuando esté abierta. Escapar completa la misión.</p></div></li></ol></div><div class="rules reveal"><span class="eyebrow">DOMINA LOS CONTROLES</span><ul class="keys"><li><kbd>Enter</kbd><span>Empezar tras cargar</span></li><li><kbd>↑ ← ↓ →</kbd><span>Mover al personaje</span></li></ul><div class="result"><h4>Objetivo de victoria</h4><p>Recoge los 36 núcleos y atraviesa la puerta superior abierta.</p></div><div class="result"><h4>El peligro</h4><p>Evita a los bumeranes: son la amenaza que persigue al Sujeto 001 durante su escape.</p></div></div></div>
-<div class="development reveal"><div><span class="eyebrow">CÓMO ESTÁ HECHO</span><h3>Dentro del juego.</h3><p class="tech">Unity · WebGL · Vista elevada</p></div><div class="build-list"><div><h4>Laberinto y cámara</h4><p>Escenario 3D de pasillos con una vista elevada que permite leer las rutas y localizar elementos.</p></div><div><h4>Detección y persecución</h4><p>Los enemigos detectan visualmente al personaje y lo persiguen. Los bumeranes sustituyen a los enemigos del referente clásico Pac-Man.</p></div><div><h4>Objetivos e interfaz</h4><p>Un contador sigue los núcleos restantes. La puerta superior es el objetivo de salida y la pantalla inicial explica la misión antes de comenzar.</p></div></div></div>
-<div class="player reveal" data-player="laberinto"><div class="player-toolbar"><div><span class="eyebrow">ZONA DE JUEGO / 02</span><h3>La Ciudad Sangrienta</h3></div><div class="player-actions"><button class="button start-button" data-start="laberinto" type="button">▶ START</button><button class="icon-button" data-full="laberinto" aria-label="Pantalla completa de La Ciudad Sangrienta" type="button">⛶ <span>Pantalla completa</span></button></div></div>
-<p class="player-status" id="status-laberinto" role="status" aria-live="polite">En espera · El juego solo se carga cuando pulsas START.</p>
-<div class="stage laberinto" id="stage-laberinto"><div class="game-viewport"><iframe scrolling="no" id="frame-laberinto" title="La Ciudad Sangrienta en Unity WebGL" data-src="https://illustrious-blancmange-930e81.netlify.app/" allow="fullscreen; autoplay; gamepad" allowfullscreen tabindex="-1"></iframe></div><div class="placeholder"><span class="placeholder-icon" aria-hidden="true">⌘</span><strong>Tu partida empieza aquí.</strong><p>Usa el botón START de arriba para entrar.</p><span>UNITY WEBGL / TECLADO</span></div></div>
-<p class="player-help">Haz clic dentro y pulsa Enter; muévete con las flechas. La primera carga puede tardar. Pulsa Esc para salir de pantalla completa.</p><button type="button" class="text-button retry" data-retry="laberinto" hidden>Volver a cargar este juego</button></div>
-</section>
-<section class="section character-section" id="personaje"><div class="section-heading reveal"><div><p class="eyebrow">UN PROTAGONISTA COMPARTIDO</p><h2>Reconocible<br>desde cualquier ángulo.</h2></div><p>Cabello verde, chaleco y botas. Un personaje cartoon 3D que pasa de los reflejos de la avenida a la exploración del laberinto.</p></div><div class="turnaround"><figure class="reveal"><img src="img/personaje-3-4.jpg" alt="Personaje en vista tres cuartos" loading="lazy"><figcaption>Tres cuartos</figcaption></figure><figure class="reveal"><img src="img/personaje-frente.jpg" alt="Personaje en vista frontal" loading="lazy"><figcaption>Frente</figcaption></figure><figure class="reveal"><img src="img/personaje-espalda.jpg" alt="Personaje visto desde atrás" loading="lazy"><figcaption>Espalda</figcaption></figure></div><p class="character-note reveal">En RunnerUrbano sus animaciones expresan correr, saltar, agacharse y morir. En La Ciudad Sangrienta, el Sujeto 001 recorre los pasillos para reunir energía y escapar.</p></section>
-<section class="section faq" id="ayuda"><div class="section-heading reveal"><div><p class="eyebrow">ANTES DE ENTRAR</p><h2>Prepara tu partida.</h2></div></div><div class="faq-list reveal"><details><summary>¿Qué necesito para jugar?</summary><p>Una computadora con teclado, navegador compatible con WebGL y aceleración por hardware. Se recomienda una pantalla de 1280 × 720 o mayor y 4 GB de memoria. Necesitas Internet para descargar los juegos desde Netlify.</p></details><details><summary>¿Por qué no comienza solo?</summary><p>Cada juego espera su botón START. Los enlaces del menú solo desplazan la página; no cargan ni inician partidas.</p></details><details><summary>¿El teclado no responde?</summary><p>Haz clic dentro del área de juego. En La Ciudad Sangrienta pulsa Enter después de cargar. Para volver al portal, pulsa Tab o haz clic fuera del reproductor.</p></details><details><summary>¿La carga queda bloqueada?</summary><p>Espera la descarga inicial y comprueba la conexión. Usa «Volver a cargar» para intentarlo de nuevo. Revisa que WebGL y la aceleración por hardware estén disponibles en tu navegador.</p></details><details><summary>¿Cómo paso de un juego al otro?</summary><p>Tras cargar un juego, START cambia a DETENER. Detenerlo descarga el reproductor y pierde la partida actual. Iniciar el otro juego también detiene el anterior para evitar dos sesiones simultáneas.</p></details></div></section>
-</main>
-<footer id="equipo"><div class="section footer-inner"><div><a href="#inicio" class="brand">RUNNERURBANO ↗</a><p>Portal de <strong>Alexander Condori Nina</strong></p><p>Game Development · Unidad 4: Interfaz de usuarios<br>Universidad Privada del Valle</p></div><div><p class="eyebrow">EQUIPO DE LOS JUEGOS</p><p>Harold Abdel Carpio Santander<br>Alexander Condori Nina<br>Pablo Alejandro Zaconeta Guanca</p></div><a class="back-top" href="#inicio">Volver arriba ↑</a></div><div class="footer-bottom">DOS JUEGOS / UNA MISMA PÁGINA <span>UNITY · WEBGL · 2026</span></div></footer>
-</body></html>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="header">
+    <a href="#inicio" class="brand" aria-label="RunnerUrbano, inicio"><span class="brand-mark"
+        aria-hidden="true">R↗</span><span>RUNNER<span class="brand-light">URBANO</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button">Menú ☰</button>
+    <nav id="navigation" aria-label="Navegación principal"><a href="#runner">01 · Runner</a><a href="#laberinto">02 ·
+        Laberinto</a><a href="#personaje">Personaje</a><a href="#equipo">Créditos</a></nav>
+    <button class="motion-toggle" type="button" aria-pressed="false">Pausar animación</button>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+  <main id="contenido">
+    <section class="hero section" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> PORTAL DE GAME DEVELOPMENT</p>
+        <p class="developer ">Alexander Condori Nina <span>/ Developer</span></p>
+        <h1>Una ciudad.<br>Dos formas de<br><em>sobrevivir.</em></h1>
+        <p class="hero-lead">Corre por la avenida o encuentra la salida del Sector Cero. Dos juegos, el mismo personaje
+          y una nueva oportunidad en cada partida.</p>
+        <div class="hero-actions"><a class="button" href="#runner">01 · RunnerUrbano ↓</a><a class="button outline"
+            href="#laberinto">02 · La Ciudad Sangrienta ↓</a></div>
+        <div class="hero-meta"><span>2 juegos en el navegador</span><span>Hechos en Unity</span><span>Inicio
+            manual</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orb" aria-hidden="true"></div>
+        <figure class="city-photo floating"><img src="img/ciudad.jpg" width="1600" height="752"
+            alt="La ciudad nocturna del universo RunnerUrbano">
+          <figcaption>EXPLORA / SOBREVIVE / REPITE</figcaption>
+        </figure>
+        <figure class="character-photo floating delayed"><img src="img/personaje-frente.jpg" width="235" height="422"
+            alt="Protagonista de cabello verde y vestimenta urbana">
+          <figcaption>EL CORREDOR <span>001</span></figcaption>
+        </figure>
+        <div class="floating-tag">↗ <span>La próxima ruta<br>la eliges tú.</span></div><span class="visual-coord"
+          aria-hidden="true">SECTOR CERO — 01 / 02</span>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><span>RUN · COLLECT · ESCAPE</span><b>✳</b><span>ELIGE TU SIGUIENTE
+        DESAFÍO</span><b>✳</b><span>RUN · COLLECT · ESCAPE</span></div>
+    <section class="section selection" id="juegos">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">ELIGE TU RUTA</p>
+          <h2>Dos desafíos.<br>Tu decisión.</h2>
+        </div>
+        <p>Conoce la historia y los controles de cada juego. Después, pulsa su botón START para comenzar aquí mismo.</p>
+      </div>
+      <div class="game-cards">
+        <article class="game-card reveal">
+          <div class="card-media"><img src="img/ciudad.jpg" alt="Avenida nocturna de RunnerUrbano" loading="lazy"><span
+              class="card-number">01</span></div>
+          <div class="card-body">
+            <p class="eyebrow">ACCIÓN / ENDLESS RUNNER 3D</p>
+            <h3>RunnerUrbano</h3>
+            <p>Lee el camino. Salta. Deslízate. Una carrera de reflejos por una ciudad que no te da tregua.</p><a
+              class="button" href="#runner">Explorar juego ↗</a>
+          </div>
+        </article>
+        <article class="game-card reveal">
+          <div class="card-media maze-art">
+            <div class="maze-symbol" aria-hidden="true">⌘</div><span class="maze-caption">SECTOR CERO</span><span
+              class="card-number">02</span>
+          </div>
+          <div class="card-body">
+            <p class="eyebrow">ESTRATEGIA / LABERINTO 3D</p>
+            <h3>La Ciudad Sangrienta</h3>
+            <p>Recoge la energía, evita a los bumeranes y encuentra la salida. Si te ven, comienza la caza.</p><a
+              class="button" href="#laberinto">Explorar juego ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Ambos juegos pertenecen a este mismo portal. -->
+    <section class="game section" id="runner" aria-labelledby="title-runner">
+      <div class="section-top reveal"><span class="eyebrow">JUEGO 01 / ACCIÓN / ENDLESS RUNNER 3D</span><span
+          class="index">01</span></div>
+      <div class="game-heading reveal">
+        <h2 id="title-runner">RunnerUrbano</h2>
+        <p>La avenida nunca se detiene.</p>
+      </div>
+      <div class="game-intro">
+        <figure class="game-art reveal"><img src="img/ciudad.jpg" alt="Escenario nocturno de RunnerUrbano"
+            loading="lazy">
+          <figcaption>El escenario · avenida nocturna</figcaption>
+        </figure>
+        <div class="story reveal"><span class="eyebrow">LA HISTORIA</span>
+          <h3>Una ciudad que dejó de esperar.</h3>
+          <p>Una metrópolis futurista se ha deteriorado: barricadas, contenedores y estructuras de construcción ocupan
+            una avenida iluminada por neones. El corredor avanza sin detenerse. Su motivación es sobrevivir al caos y
+            superar su propia marca. Su historia se cuenta con cada salto, cada choque y cada nuevo intento.</p>
+          <div class="stats">
+            <div><strong>1000</strong><span>puntos para ganar</span></div>
+            <div><strong>3</strong><span>vidas iniciales</span></div>
+            <div><strong>2</strong><span>acciones de esquivo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <div class="reveal"><span class="eyebrow">CÓMO JUGAR</span>
+          <h3>Tu próxima partida,<br>paso a paso.</h3>
+          <ol class="steps">
+            <li><span>01</span>
+              <div>
+                <h4>Mira el obstáculo</h4>
+                <p>El personaje corre automáticamente. Identifica si el peligro es bajo o alto.</p>
+              </div>
+            </li>
+            <li><span>02</span>
+              <div>
+                <h4>Elige tu movimiento</h4>
+                <p>Salta sobre barricadas y cajas. Agáchate para pasar bajo barras y señales.</p>
+              </div>
+            </li>
+            <li><span>03</span>
+              <div>
+                <h4>Alcanza la meta</h4>
+                <p>La puntuación aumenta al sobrevivir. Llega a 1000 puntos antes de perder las tres vidas.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="rules reveal"><span class="eyebrow">DOMINA LOS CONTROLES</span>
+          <ul class="keys">
+            <li><kbd>↑</kbd><span>Saltar</span></li>
+            <li><kbd>↓</kbd><span>Agacharse</span></li>
+            <li><kbd>R</kbd><span>Reiniciar al terminar</span></li>
+          </ul>
+          <div class="result">
+            <h4>Objetivo de victoria</h4>
+            <p>Alcanza o supera los 1000 puntos.</p>
+          </div>
+          <div class="result">
+            <h4>El peligro</h4>
+            <p>Cada choque resta una vida. Al perder las tres, termina la carrera.</p>
+          </div>
+        </div>
+      </div>
+      <div class="development reveal">
+        <div><span class="eyebrow">CÓMO ESTÁ HECHO</span>
+          <h3>Dentro del juego.</h3>
+          <p class="tech">Unity · WebGL · Tercera persona</p>
+        </div>
+        <div class="build-list">
+          <div>
+            <h4>Escenario y personaje</h4>
+            <p>Entorno 3D urbano y protagonista de estilo cartoon. Sus animaciones permiten correr, saltar, agacharse y
+              morir.</p>
+          </div>
+          <div>
+            <h4>Obstáculos y colisiones</h4>
+            <p>Los obstáculos bajos y altos aparecen con variación de tiempo y tipo. Los que quedan atrás se retiran de
+              la escena.</p>
+          </div>
+          <div>
+            <h4>Progresión e interfaz</h4>
+            <p>La dificultad aumenta con el tiempo. La interfaz comunica puntuación, vidas y resultado.</p>
+          </div>
+        </div>
+      </div>
+      <div class="player reveal" data-player="runner">
+        <div class="player-toolbar">
+          <div><span class="eyebrow">ZONA DE JUEGO / 01</span>
+            <h3>RunnerUrbano</h3>
+          </div>
+          <div class="player-actions"><button class="button start-button" data-start="runner" type="button">▶
+              START</button><button class="icon-button" data-full="runner"
+              aria-label="Pantalla completa de RunnerUrbano" type="button">⛶ <span>Pantalla completa</span></button>
+          </div>
+        </div>
+        <p class="player-status" id="status-runner" role="status" aria-live="polite">En espera · El juego solo se carga
+          cuando pulsas START.</p>
+        <div class="stage runner" id="stage-runner">
+          <div class="game-viewport"><iframe scrolling="no" id="frame-runner" title="RunnerUrbano en Unity WebGL"
+              data-src="https://aquamarine-pothos-2552f7.netlify.app/" allow="fullscreen; autoplay; gamepad"
+              allowfullscreen tabindex="-1"></iframe></div>
+          <div class="placeholder"><span class="placeholder-icon" aria-hidden="true">↗</span><strong>Tu partida empieza
+              aquí.</strong>
+            <p>Usa el botón START de arriba para entrar.</p><span>UNITY WEBGL / TECLADO</span>
+          </div>
+        </div>
+        <p class="player-help">Haz clic dentro del juego y usa ↑ / ↓. La primera carga puede tardar. Pulsa Esc para
+          salir de pantalla completa.</p><button type="button" class="text-button retry" data-retry="runner"
+          hidden>Volver a cargar este juego</button>
+      </div>
+    </section>
+    <section class="game section" id="laberinto" aria-labelledby="title-laberinto">
+      <div class="section-top reveal"><span class="eyebrow">JUEGO 02 / ESTRATEGIA / LABERINTO 3D</span><span
+          class="index">02</span></div>
+      <div class="game-heading reveal">
+        <h2 id="title-laberinto">La Ciudad Sangrienta</h2>
+        <p>Si te ven, comienza la caza.</p>
+      </div>
+      <div class="game-intro">
+        <figure class="game-art reveal">
+          <div class="maze-art large-maze" aria-label="Ilustración conceptual de Sector Cero"><span class="maze-symbol"
+              aria-hidden="true">⌘</span><span class="maze-caption">SECTOR CERO / SUJETO 001</span></div>
+          <figcaption>Ilustración conceptual · no es un mapa del nivel</figcaption>
+        </figure>
+        <div class="story reveal"><span class="eyebrow">LA HISTORIA</span>
+          <h3>Un escape desde el Sector Cero.</h3>
+          <p>El Sujeto 001 está atrapado en el Sector Cero. Para escapar debe explorar un laberinto vigilado por
+            bumeranes que lo persiguen cuando lo ven. Los núcleos de energía están repartidos por los pasillos y la
+            salida se encuentra en la parte superior. Cada desvío exige decidir entre avanzar hacia el objetivo o
+            alejarse de una persecución.</p>
+          <div class="stats">
+            <div><strong>36</strong><span>núcleos de energía</span></div>
+            <div><strong>1</strong><span>salida superior</span></div>
+            <div><strong>4</strong><span>direcciones</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <div class="reveal"><span class="eyebrow">CÓMO JUGAR</span>
+          <h3>Tu próxima partida,<br>paso a paso.</h3>
+          <ol class="steps">
+            <li><span>01</span>
+              <div>
+                <h4>Explora el Sector Cero</h4>
+                <p>Muévete por los pasillos y recoge los 36 núcleos. El contador indica cuántos faltan.</p>
+              </div>
+            </li>
+            <li><span>02</span>
+              <div>
+                <h4>Evita ser detectado</h4>
+                <p>Los bumeranes te siguen si te ven. Aprovecha los giros y la distribución del laberinto para alejarte.
+                </p>
+              </div>
+            </li>
+            <li><span>03</span>
+              <div>
+                <h4>Cruza la salida</h4>
+                <p>Completa la recolección y atraviesa la puerta superior cuando esté abierta. Escapar completa la
+                  misión.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="rules reveal"><span class="eyebrow">DOMINA LOS CONTROLES</span>
+          <ul class="keys">
+            <li><kbd>Enter</kbd><span>Empezar tras cargar</span></li>
+            <li><kbd>↑ ← ↓ →</kbd><span>Mover al personaje</span></li>
+          </ul>
+          <div class="result">
+            <h4>Objetivo de victoria</h4>
+            <p>Recoge los 36 núcleos y atraviesa la puerta superior abierta.</p>
+          </div>
+          <div class="result">
+            <h4>El peligro</h4>
+            <p>Evita a los bumeranes: son la amenaza que persigue al Sujeto 001 durante su escape.</p>
+          </div>
+        </div>
+      </div>
+      <div class="development reveal">
+        <div><span class="eyebrow">CÓMO ESTÁ HECHO</span>
+          <h3>Dentro del juego.</h3>
+          <p class="tech">Unity · WebGL · Vista elevada</p>
+        </div>
+        <div class="build-list">
+          <div>
+            <h4>Laberinto y cámara</h4>
+            <p>Escenario 3D de pasillos con una vista elevada que permite leer las rutas y localizar elementos.</p>
+          </div>
+          <div>
+            <h4>Detección y persecución</h4>
+            <p>Los enemigos detectan visualmente al personaje y lo persiguen. Los bumeranes sustituyen a los enemigos
+              del referente clásico Pac-Man.</p>
+          </div>
+          <div>
+            <h4>Objetivos e interfaz</h4>
+            <p>Un contador sigue los núcleos restantes. La puerta superior es el objetivo de salida y la pantalla
+              inicial explica la misión antes de comenzar.</p>
+          </div>
+        </div>
+      </div>
+      <div class="player reveal" data-player="laberinto">
+        <div class="player-toolbar">
+          <div><span class="eyebrow">ZONA DE JUEGO / 02</span>
+            <h3>La Ciudad Sangrienta</h3>
+          </div>
+          <div class="player-actions"><button class="button start-button" data-start="laberinto" type="button">▶
+              START</button><button class="icon-button" data-full="laberinto"
+              aria-label="Pantalla completa de La Ciudad Sangrienta" type="button">⛶ <span>Pantalla
+                completa</span></button></div>
+        </div>
+        <p class="player-status" id="status-laberinto" role="status" aria-live="polite">En espera · El juego solo se
+          carga cuando pulsas START.</p>
+        <div class="stage laberinto" id="stage-laberinto">
+          <div class="game-viewport"><iframe scrolling="no" id="frame-laberinto"
+              title="La Ciudad Sangrienta en Unity WebGL" data-src="https://illustrious-blancmange-930e81.netlify.app/"
+              allow="fullscreen; autoplay; gamepad" allowfullscreen tabindex="-1"></iframe></div>
+          <div class="placeholder"><span class="placeholder-icon" aria-hidden="true">⌘</span><strong>Tu partida empieza
+              aquí.</strong>
+            <p>Usa el botón START de arriba para entrar.</p><span>UNITY WEBGL / TECLADO</span>
+          </div>
+        </div>
+        <p class="player-help">Haz clic dentro y pulsa Enter; muévete con las flechas. La primera carga puede tardar.
+          Pulsa Esc para salir de pantalla completa.</p><button type="button" class="text-button retry"
+          data-retry="laberinto" hidden>Volver a cargar este juego</button>
+      </div>
+    </section>
+    <section class="section character-section" id="personaje">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">UN PROTAGONISTA COMPARTIDO</p>
+          <h2>Reconocible<br>desde cualquier ángulo.</h2>
+        </div>
+        <p>Cabello verde, chaleco y botas. Un personaje cartoon 3D que pasa de los reflejos de la avenida a la
+          exploración del laberinto.</p>
+      </div>
+      <div class="turnaround">
+        <figure class="reveal"><img src="img/personaje-3-4.jpg" alt="Personaje en vista tres cuartos" loading="lazy">
+          <figcaption>Tres cuartos</figcaption>
+        </figure>
+        <figure class="reveal"><img src="img/personaje-frente.jpg" alt="Personaje en vista frontal" loading="lazy">
+          <figcaption>Frente</figcaption>
+        </figure>
+        <figure class="reveal"><img src="img/personaje-espalda.jpg" alt="Personaje visto desde atrás" loading="lazy">
+          <figcaption>Espalda</figcaption>
+        </figure>
+      </div>
+      <p class="character-note reveal">En RunnerUrbano sus animaciones expresan correr, saltar, agacharse y morir. En La
+        Ciudad Sangrienta, el Sujeto 001 recorre los pasillos para reunir energía y escapar.</p>
+    </section>
+    <section class="section faq" id="ayuda">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">ANTES DE ENTRAR</p>
+          <h2>Prepara tu partida.</h2>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary>¿Qué necesito para jugar?</summary>
+          <p>Una computadora con teclado, navegador compatible con WebGL y aceleración por hardware. Se recomienda una
+            pantalla de 1280 × 720 o mayor y 4 GB de memoria. Necesitas Internet para descargar los juegos desde
+            Netlify.</p>
+        </details>
+        <details>
+          <summary>¿Por qué no comienza solo?</summary>
+          <p>Cada juego espera su botón START. Los enlaces del menú solo desplazan la página; no cargan ni inician
+            partidas.</p>
+        </details>
+        <details>
+          <summary>¿El teclado no responde?</summary>
+          <p>Haz clic dentro del área de juego. En La Ciudad Sangrienta pulsa Enter después de cargar. Para volver al
+            portal, pulsa Tab o haz clic fuera del reproductor.</p>
+        </details>
+        <details>
+          <summary>¿La carga queda bloqueada?</summary>
+          <p>Espera la descarga inicial y comprueba la conexión. Usa «Volver a cargar» para intentarlo de nuevo. Revisa
+            que WebGL y la aceleración por hardware estén disponibles en tu navegador.</p>
+        </details>
+        <details>
+          <summary>¿Cómo paso de un juego al otro?</summary>
+          <p>Tras cargar un juego, START cambia a DETENER. Detenerlo descarga el reproductor y pierde la partida actual.
+            Iniciar el otro juego también detiene el anterior para evitar dos sesiones simultáneas.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer id="equipo">
+    <div class="section footer-inner">
+      <div><a href="#inicio" class="brand">RUNNERURBANO ↗</a>
+        <p>Portal de <strong>Alexander Condori Nina</strong></p>
+        <p>Game Development · Unidad 4: Interfaz de usuarios<br>Universidad Privada del Valle</p>
+      </div>
+      <div>
+        <p class="eyebrow">EQUIPO DE LOS JUEGOS</p>
+        <p>Harold Abdel Carpio Santander<br>Alexander Condori Nina<br>Pablo Alejandro Zaconeta Guanca</p>
+      </div><a class="back-top" href="#inicio">Volver arriba ↑</a>
+    </div>
+    <div class="footer-bottom">DOS JUEGOS / UNA MISMA PÁGINA <span>UNITY · WEBGL · 2026</span></div>
+  </footer>
+</body>
+
+</html>
