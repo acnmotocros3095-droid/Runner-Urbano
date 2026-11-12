@@ -1,63 +1,60 @@
-# RunnerUrbano · Portal de juegos
+# RunnerUrbano — Portal actualizado
 
-Portal web en español de **RunnerUrbano** y **La Ciudad Sangrienta**, desarrollados en Unity y publicados para navegador con WebGL. El sitio reúne la historia, el personaje, las mecánicas y los reproductores de ambos juegos.
+Portal individual de **Alexander Condori Nina**, con RunnerUrbano y La Ciudad Sangrienta en un único `index.html`.
 
-## La Ciudad Sangrienta
+## Abrir el portal
 
-El **Sujeto 001** debe escapar del **Sector Cero**. Es un juego de laberinto 3D con una dinámica inspirada en Pac-Man, protagonizado por el personaje de RunnerUrbano. Los bumeranes te persiguen cuando te detectan.
+Extrae todo el ZIP y abre `index.html` en un navegador. Conserva las carpetas `css`, `js` e `img` junto a ese archivo. También puedes servir esta carpeta con cualquier servidor HTTP estático. El portal no necesita instalación ni compilación.
 
-### Cómo ganar
+Los juegos necesitan Internet, WebGL, aceleración por hardware y un teclado físico. Sus builds permanecen alojados en los servidores Netlify originales; el ZIP contiene el portal, no los proyectos Unity ni sus builds. Todas las partidas se muestran dentro del portal, sin enlaces que abran otros sitios.
 
-1. Recorre el laberinto y recoge los **36 núcleos de energía**.
-2. Evita a los bumeranes y sus persecuciones.
-3. Atraviesa la **puerta superior cuando esté abierta** para escapar.
+## Requisitos incorporados
 
-### Controles
-
-| Tecla | Acción |
-| --- | --- |
-| Enter | Empezar la partida |
-| Flechas ↑ ← ↓ → | Mover al personaje |
-
-[Jugar La Ciudad Sangrienta](https://illustrious-blancmange-930e81.netlify.app/)
+- Nombre del desarrollador visible en el banner principal.
+- Menú y selección para los dos juegos mediante anclas internas.
+- Una única página HTML, con una sección para cada videojuego.
+- Botón START propio situado encima de cada área de juego.
+- Ningún iframe tiene `src` al abrir el portal: los juegos esperan una acción explícita.
+- Los enlaces del menú no inician partidas. Pantalla completa tampoco inicia un juego que esté detenido.
+- Historia, instrucciones, controles, objetivos y explicación funcional del desarrollo para ambos juegos.
+- Paleta de verde profundo, menta, coral y marfil; imágenes flotantes, desplazamiento suave y entradas al hacer scroll.
+- Menú móvil, opción para pausar animaciones y respeto a `prefers-reduced-motion`.
+- Fondo urbano oscuro alrededor de los juegos, incluido el modo de pantalla completa.
 
 ## RunnerUrbano
 
-Un endless runner 3D ambientado en una avenida nocturna. Salta sobre obstáculos bajos y agáchate para pasar bajo los altos. Empiezas con **3 vidas** y el objetivo es llegar a **1000 puntos**.
+Carrera 3D por una avenida nocturna. El personaje avanza automáticamente: ↑ salta y ↓ agacha al corredor. Cada choque resta una de las tres vidas; la meta es alcanzar 1000 puntos. R reinicia al terminar.
 
-| Tecla | Acción |
-| --- | --- |
-| ↑ | Saltar |
-| ↓ | Agacharse |
-| R | Reiniciar al terminar |
+## La Ciudad Sangrienta
 
-[Jugar RunnerUrbano](https://aquamarine-pothos-2552f7.netlify.app/)
+El Sujeto 001 debe escapar del Sector Cero. Recoge 36 núcleos de energía, evita los bumeranes que persiguen al personaje al verlo y atraviesa la puerta superior cuando esté abierta. Tras START y la carga de Unity, haz clic dentro del juego y pulsa Enter. Las flechas controlan el movimiento.
 
-## Jugar desde el portal
+## Funcionamiento del reproductor
 
-Cada juego se carga al pulsar su botón de inicio. Haz clic dentro del reproductor para activar el teclado. Los botones del portal permiten entrar en pantalla completa o abrir el juego en otra pestaña.
+START carga solo el juego elegido y cambia a DETENER. Detener descarga ese iframe y pierde la partida. Iniciar el otro juego detiene el anterior para evitar consumo simultáneo y audio duplicado. «Volver a cargar» reinicia únicamente la sesión elegida.
 
-Los reproductores conservan la proporción del canvas de Unity (960 × 600), ajustan su tamaño al espacio disponible y muestran un fondo urbano oscuro alrededor. El encuadre oculta los márgenes y el pie de la plantilla externa de Unity sin recortar el canvas. El fondo del portal también se mantiene al usar su botón de pantalla completa.
+Los iframes muestran builds Unity de 960 × 600. El encuadre oculta el pie de la plantilla del host, conservando el canvas. La altura interna del iframe es 638 px (600 de canvas y 38 del pie), y el contenedor visible conserva los 600 px. Si cambia la plantilla externa, debe revisarse este ajuste. No es posible controlar el progreso real de la descarga de Unity desde otro dominio: los mensajes diferencian la apertura del reproductor de la carga del juego.
 
-Se recomienda una computadora con teclado, un navegador compatible con WebGL y aceleración por hardware. La primera carga necesita conexión a Internet y puede tardar unos segundos.
+La explicación «Cómo está hecho» describe la estructura y el comportamiento observable de los juegos. Este paquete no contiene ni pretende documentar nombres de scripts o clases del proyecto Unity original.
 
-## Desarrollo local
+## Publicar sobre el portal existente
 
-Es un sitio estático: no requiere compilación ni dependencias de aplicación. Abre `index.html` o sirve la carpeta con un servidor HTTP estático de tu preferencia.
+1. Copia `index.html`, `css`, `js` e `img` en la raíz del repositorio Runner-Urbano, reemplazando los archivos del portal anterior. Conserva la carpeta `.git` de tu repositorio.
+2. Haz commit y push a la rama que ya usa tu alojamiento.
+3. Espera al despliegue y revisa la URL pública real. Si usas GitHub Pages, conserva su configuración existente para la rama y carpeta publicadas.
+4. Completa la evidencia solicitada por la práctica siguiendo `GUIA-DE-ENTREGA.md`.
+
+No se ha publicado esta versión desde el ZIP ni se ha inventado un enlace público de despliegue.
+
+## Estructura
 
 ```text
-index.html       Contenido del portal y reproductores
-css/style.css    Diseño, adaptación a móviles y fondos
-js/script.js     Navegación, carga de juegos y pantalla completa
-img/             Imágenes del portal
+index.html
+css/style.css
+js/script.js
+img/
+README.md
+GUIA-DE-ENTREGA.md
 ```
 
-Los builds de Unity se cargan desde los enlaces de Netlify; este repositorio contiene el portal, no los proyectos fuente de Unity. Los cambios en el portal no modifican las páginas independientes de Netlify. Si cambia la plantilla externa o la resolución del canvas, debe revisarse el encuadre en CSS y JavaScript.
-
-## Equipo
-
-- Harold Abdel Carpio Santander
-- Alexander Condori Nina
-- Pablo Alejandro Zaconeta Guanca
-
-Universidad Privada del Valle · Game Development.
+Equipo de los juegos: Harold Abdel Carpio Santander, Alexander Condori Nina y Pablo Alejandro Zaconeta Guanca. Universidad Privada del Valle · Game Development, Unidad 4.
